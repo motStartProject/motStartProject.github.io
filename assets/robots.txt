@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://motStartProject.github.io/sitemap.xml
