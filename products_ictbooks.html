@@ -203,85 +203,117 @@ document.addEventListener("DOMContentLoaded", function() {
               <strong>motStarter Keys Series</strong></h5>
             <h6 class="item-subtitle mbr-fonts-style display-7">Colorful and printable ICT books especially designed for young children. Each book comes with easy-to-follow reading guide for parents and guardians.</h6>
             <p class="mbr-text mbr-fonts-style display-7">1.&nbsp;<strong>My First Computer Setup </strong>by T.B. Lume<br>
-<!-- BEGIN: Self-contained Thumbnail Pop-up --> 
+
+
 <style>
-  /* Thumbnail container (square, clickable) */
-  .my-popup-thumbnail-container {
-    width: 200px;       /* Adjust thumbnail size */
-    height: 200px;      /* 1:1 aspect ratio */
+/* Thumbnail container */
+.popup-thumbnail-container {
+    width: 150px;
+    height: 150px;
     overflow: hidden;
     cursor: pointer;
     display: inline-block;
-    border-radius: 0 !important; /* Override global rounding */
-  }
+    border-radius: 0 !important;
+}
 
-  /* Thumbnail image - cropped, square, overrides global styles */
-  .my-popup-thumbnail-container img {
+.popup-thumbnail-container img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    display: block !important;
-    border-radius: 0 !important; /* Prevent round edges */
+    border-radius: 0 !important;
+    display: block;
     transition: transform 0.3s ease;
-  }
+}
 
-  .my-popup-thumbnail-container img:hover {
+.popup-thumbnail-container img:hover {
     transform: scale(1.05);
-  }
+}
 
-  /* Modal overlay */
-  .my-popup-modal {
+/* Modal overlay */
+.popup-modal {
     display: none;
     position: fixed;
     z-index: 9999;
-    left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0,0,0,0.85);
     justify-content: center;
     align-items: center;
-  }
+    overflow: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
 
-  /* Modal image */
-  .my-popup-modal img {
-    max-width: 90% !important;
-    max-height: 90% !important;
-    border-radius: 5px !important; /* Slight rounding for modal only */
-  }
+/* Modal image */
+.popup-modal img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px !important;
+    display: block;
+    margin: 0 auto;
+    cursor: default; /* prevent accidental zoom on mobile */
+}
 
-  /* Show modal when targeted */
-  .my-popup-modal:target {
-    display: flex;
-  }
-
-  /* Close button */
-  .my-popup-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
+/* Close button */
+.popup-close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
     color: white;
-    text-decoration: none;
     font-weight: bold;
-    z-index: 10000;
-  }
+    text-decoration: none;
+    z-index: 10001;
+}
+
+/* Show modal (controlled via JS) */
+.popup-modal.active {
+    display: flex;
+}
 </style>
 
 <!-- Thumbnail -->
-<a href="#my-popup">
-  <div class="my-popup-thumbnail-container">
+<div class="popup-thumbnail-container" id="thumb-first-computer">
     <img src="https://pe56d.s3.amazonaws.com/o_1jkgecllrtv2tucpbq1jlpag61r.png" alt="Thumbnail">
-  </div>
-</a>
-
-<!-- Modal / Pop-up -->
-<div id="my-popup" class="my-popup-modal">
-  <a href="#" class="my-popup-close">&times;</a>
-  <img src="https://pe56d.s3.amazonaws.com/o_1jkgecllrtv2tucpbq1jlpag61r.png" alt="Full Image">
 </div>
-<!-- END: Self-contained Thumbnail Pop-up -->
 
+<!-- Modal -->
+<div class="popup-modal" id="modal-first-computer">
+    <a href="#" class="popup-close">&times;</a>
+    <img src="https://pe56d.s3.amazonaws.com/o_1jkgecllrtv2tucpbq1jlpag61r.png" alt="Full Image">
+</div>
+
+<script>
+// JavaScript for open/close modal
+const thumb = document.getElementById("thumb-first-computer");
+const modal = document.getElementById("modal-first-computer");
+const closeBtn = modal.querySelector(".popup-close");
+
+// Open modal on thumbnail click
+thumb.addEventListener("click", () => {
+    modal.classList.add("active");
+});
+
+// Close modal on close button click
+closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.remove("active");
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) { // clicked the overlay
+        modal.classList.remove("active");
+    }
+});
+</script>
+
+
+
+
+				
 
 				<p class="mbr-text mbr-fonts-style display-7"> <em>
 				 About: "My First Computer Setup; let's meet our first computer station!" is designed for kids ages 5 to 7. This playful guide uses simple pictures, short sentences, and a lovable mascot to introduce the basics of a computer station.&nbsp;</em><br>
