@@ -257,11 +257,32 @@ document.addEventListener("DOMContentLoaded", function() {
             <h5 class="item-title mbr-fonts-style display-5"><strong>Trustworthy Platforms</strong></h5>
             <h6 class="item-subtitle mbr-fonts-style display-7">You may also purchase our products from any of the e-book/ digital product&nbsp; platforms listed below:</h6>
 				
-					<br><br> <p style="color: indigo;">
-					<a href="https://payhip.com/motStart1ctbooks"> <b>>Payhip</b></a>	
-					<br>
-					<a href= "https://a.co/d/02skhTan">> <b>>Amazon books/ Kindle</b></a>
-					</p>
+					<style>
+  .star-list {
+    list-style-type: none; /* remove default bullets */
+    padding-left: 0;
+  }
+  .star-list li::before {
+    content: "★ "; /* Unicode star */
+    color: indigo; /* star color */
+    font-weight: bold;
+  }
+  .star-list a {
+    color: indigo !important;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .star-list a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<ul class="star-list">
+  <li><a href="https://payhip.com/motStart1ctbooks">Payhip</a></li>
+  <li><a href="https://a.co/d/02skhTan">Amazon Books / Kindle</a></li>
+</ul>
+
+
 				<br><br><br><br>  <p class="mbr-text mbr-fonts-style display-7"> <em>
 			*Note: <i>Publishing and verification processes can differ across platforms,
 					and certain territorial distribution restrictions may apply. 
@@ -281,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="col-12 content-head">
       <div class="mb-5">
         <h3 class="mbr-section-title mbr-fonts-style align-center m-0 display-2"><br><strong>   
-			<p style="color: orange;"> Book Cover Gallery</p></strong></h3>
+			<p style="color: orange;"> <b>Book Cover Gallery</b></p></strong></h3>
         <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
         We appreciate your patience — exciting new titles are on the way!<br>
 			We’re looking forward to sharing them with you soon, <br>so be sure to check back regularly for the latest updates.
