@@ -212,112 +212,27 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- motStarter Keys book 1 description --> 
 			  
 			  <p class="mbr-text mbr-fonts-style display-7">1.<strong>My First Computer Setup </strong>by T.B. Lume<br>
-
-
 <style>
-/* Thumbnail container */
 .popup-thumbnail-container {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    cursor: pointer;
+    width: 192px;   /* about 2 inches wide */
+    max-width: 100%; /* ensures responsiveness on small screens */
+    height: auto;
     display: inline-block;
-    border-radius: 0 !important;
 }
 
 .popup-thumbnail-container img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-radius: 0 !important;
+    width: 100%;
+    height: auto; /* keeps aspect ratio */
+    object-fit: contain; /* ensures full rectangular shape */
     display: block;
-    transition: transform 0.3s ease;
-}
-
-.popup-thumbnail-container img:hover {
-    transform: scale(1.05);
-}
-
-/* Modal overlay */
-.popup-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-/* Modal image */
-.popup-modal img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 5px !important;
-    display: block;
-    margin: 0 auto;
-    cursor: default; /* prevent accidental zoom on mobile */
-}
-
-/* Close button */
-.popup-close {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    z-index: 10001;
-}
-
-/* Show modal (controlled via JS) */
-.popup-modal.active {
-    display: flex;
 }
 </style>
 
-<!-- Thumbnail -->
-<div class="popup-thumbnail-container" id="thumb-first-computer">
+<div class="popup-thumbnail-container">
     <img src="https://pe56d.s3.amazonaws.com/o_1jkgecllrtv2tucpbq1jlpag61r.png" alt="Thumbnail">
 </div>
 
-<!-- Modal -->
-<div class="popup-modal" id="modal-first-computer">
-    <a href="#" class="popup-close">&times;</a>
-    <img src="https://pe56d.s3.amazonaws.com/o_1jkgecllrtv2tucpbq1jlpag61r.png" alt="Full Image">
-</div>
-
-<script>
-// JavaScript for open/close modal
-const thumb = document.getElementById("thumb-first-computer");
-const modal = document.getElementById("modal-first-computer");
-const closeBtn = modal.querySelector(".popup-close");
-
-// Open modal on thumbnail click
-thumb.addEventListener("click", () => {
-    modal.classList.add("active");
-});
-
-// Close modal on close button click
-closeBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.classList.remove("active");
-});
-
-// Close modal when clicking outside the image
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) { // clicked the overlay
-        modal.classList.remove("active");
-    }
-});
-</script>				
+	
 
 				<p class="mbr-text mbr-fonts-style display-7"> <em>
 				 About: "My First Computer Setup; let's meet our first computer station!" is designed to introduce kids ages 5 to 7 to their very first ICT lesson. This playful guide uses simple pictures, short sentences, and a lovable mascot to introduce the basics of a computer station.</em><br>
@@ -346,108 +261,26 @@ modal.addEventListener("click", (e) => {
 
 
 <style>
-/* Thumbnail container */
 .popup-thumbnail-container {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    cursor: pointer;
+    width: 192px;   /* about 2 inches wide */
+    max-width: 100%; /* ensures responsiveness on small screens */
+    height: auto;
     display: inline-block;
-    border-radius: 0 !important;
 }
 
 .popup-thumbnail-container img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-radius: 0 !important;
+    width: 100%;
+    height: auto; /* keeps aspect ratio */
+    object-fit: contain; /* ensures full rectangular shape */
     display: block;
-    transition: transform 0.3s ease;
-}
-
-.popup-thumbnail-container img:hover {
-    transform: scale(1.05);
-}
-
-/* Modal overlay */
-.popup-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-/* Modal image */
-.popup-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 5px !important;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Close button */
-.popup-close {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    z-index: 10001;
-}
-
-/* Show modal */
-.popup-modal.active {
-    display: flex;
 }
 </style>
 
-<!-- Thumbnail -->
-<div class="popup-thumbnail-container" id="thumb-internet-safety">
+<div class="popup-thumbnail-container">
     <img src="https://pe56d.s3.amazonaws.com/o_1jl527dkbp931ukb1shn68r3e81a.jpg" alt="Thumbnail">
 </div>
 
-<!-- Modal -->
-<div class="popup-modal" id="modal-internet-safety">
-    <a href="#" class="popup-close">&times;</a>
-    <img src="https://pe56d.s3.amazonaws.com/o_1jl527dkbp931ukb1shn68r3e81a.jpg" alt="Full Image">
-</div>
 
-<script>
-// JavaScript for open/close modal
-const thumb = document.getElementById("thumb-internet-safety");
-const modal = document.getElementById("modal-internet-safety");
-const closeBtn = modal.querySelector(".popup-close");
-
-// Open modal on thumbnail click
-thumb.addEventListener("click", () => {
-    modal.classList.add("active");
-});
-
-// Close modal on close button click
-closeBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.classList.remove("active");
-});
-
-// Close modal when clicking outside the image
-modal.addEventListener("click", (e) => {
-    if (e.target === modal || e.target === closeBtn) {
-        modal.classList.remove("active");
-    }
-});
-</script>
 
 <!-- motStarter Keys book 2 description --> 
 
