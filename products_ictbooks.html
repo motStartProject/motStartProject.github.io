@@ -208,7 +208,10 @@ document.addEventListener("DOMContentLoaded", function() {
             <h5 class="item-title mbr-fonts-style display-5">
               <strong>motStarter Keys Series</strong></h5>
             <h6 class="item-subtitle mbr-fonts-style display-7">Colorful and printable ICT books especially designed for young children. Each book comes with easy-to-follow reading guide for parents and guardians.</h6>
-            <p class="mbr-text mbr-fonts-style display-7">1.<strong>My First Computer Setup </strong>by T.B. Lume<br>
+
+ /* motStarter Keys Book 1 descriptions */
+			  
+			  <p class="mbr-text mbr-fonts-style display-7">1.<strong>My First Computer Setup </strong>by T.B. Lume<br>
 
 
 <style>
@@ -314,12 +317,7 @@ modal.addEventListener("click", (e) => {
         modal.classList.remove("active");
     }
 });
-</script>
-
-
-
-
-				
+</script>				
 
 				<p class="mbr-text mbr-fonts-style display-7"> <em>
 				 About: "My First Computer Setup; let's meet our first computer station!" is designed to introduce kids ages 5 to 7 to their very first ICT lesson. This playful guide uses simple pictures, short sentences, and a lovable mascot to introduce the basics of a computer station.</em><br>
@@ -342,10 +340,133 @@ modal.addEventListener("click", (e) => {
 				<br>
 				-----
 				<br>
-				
-				2. [coming soon]
+
+ /* motStarter Keys Book 2 descriptions */
+					
+			 <p class="mbr-text mbr-fonts-style display-7">2.<strong>Click Smart, Stay Safe </strong>by T.B. Lume<br>
+
+
+<style>
+/* Thumbnail container */
+.popup-thumbnail-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 0 !important;
+}
+
+.popup-thumbnail-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.popup-thumbnail-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal overlay */
+.popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Modal image */
+.popup-modal img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px !important;
+    display: block;
+    margin: 0 auto;
+    cursor: default; /* prevent accidental zoom on mobile */
+}
+
+/* Close button */
+.popup-close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 10001;
+}
+
+/* Show modal (controlled via JS) */
+.popup-modal.active {
+    display: flex;
+}
+</style>
+
+<!-- Thumbnail -->
+<div class="popup-thumbnail-container" id="thumb-internet-safety">
+    <img src="https://pe56d.s3.amazonaws.com/o_1jl527dkbp931ukb1shn68r3e81a.jpg" alt="Thumbnail">
+</div>
+
+<!-- Modal -->
+<div class="popup-modal" id="modal-internet-safety">
+    <a href="#" class="popup-close">&times;</a>
+    <img src="https://pe56d.s3.amazonaws.com/o_1jl527dkbp931ukb1shn68r3e81a.jpg" alt="Full Image">
+</div>
+
+<script>
+// JavaScript for open/close modal
+const thumb = document.getElementById("thumb-first-computer");
+const modal = document.getElementById("modal-first-computer");
+const closeBtn = modal.querySelector(".popup-close");
+
+// Open modal on thumbnail click
+thumb.addEventListener("click", () => {
+    modal.classList.add("active");
+});
+
+// Close modal on close button click
+closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.remove("active");
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) { // clicked the overlay
+        modal.classList.remove("active");
+    }
+});
+</script>				
+
+				<p class="mbr-text mbr-fonts-style display-7"> <em>
+				 About: "Click Smart, Stay Safe" is the must-have e-book for kids stepping into the online world! Packed with over 24 pages of bright illustrations and lovable characters, it transforms Internet safety into an adventure that’s fun to follow and easy to remember. 
+					Tailored for ages 6–8, this colorful guide written in simple, child-friendly explanations, introduces smart online habits through relatable scenarios and interactive questionnaires—helping children build confidence while staying safe. More than just a book, 
+					it’s a playful toolkit that empowers young learners to click with care and explore the digital world responsibly.</em><br>
 				
 				<br>
+				<strong style="">Click Smart, Stay Safe:</strong>
+			  <em> <br> A fun Internet Safety Guide for Kids<br></em>
+				<i>Learn more <a href="https://payhip.com/b/TBLo1" target="_blank"><b>here</b></a></i> or
+				<br>
+				<a href="https://payhip.com/b/TBLo1" class="payhip-buy-button" data-theme="blue" data-product="TBLo1">Buy Picture book Now</a>
+				<br>
+				---or checkout a related product;
+				<br>
+				<em> <br> Coming soon! <br></em>
+				-----
 				<br>
 				3. [comin soon]</p>
             
