@@ -335,10 +335,12 @@ document.addEventListener("DOMContentLoaded", function() {
     list-style-type: none;
     padding-left: 0;
     color: white;
+    margin: 0;
   }
 
   .star-list > li {
-    margin-bottom: 6px;
+    margin: 2px 0;
+    font-weight: bold;
   }
 
   .star-list > li::before {
@@ -349,34 +351,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
   .sub-list {
     list-style-type: none;
-    padding-left: 20px;
-    margin-top: 4px;
+    padding-left: 18px;
+    margin: 2px 0;
   }
 
   .sub-list li {
     color: white;
-    margin-bottom: 4px;
+    margin: 2px 0;
+    font-weight: normal;
   }
 
   .star-list a, .sub-list a {
     color: white !important;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s ease; /* smooth hover */
   }
 
   .star-list a:hover, .sub-list a:hover {
+    color: indigo !important; /* 👈 hover color */
     text-decoration: underline;
   }
 
   .arrow {
     font-weight: bold;
-    margin-right: 6px;
+    margin-right: 4px;
   }
 
   .note {
     font-size: 11px;
     color: white;
-    margin-left: 20px;
+    margin: 2px 0 2px 18px;
+    line-height: 1.2;
   }
 </style>
 
