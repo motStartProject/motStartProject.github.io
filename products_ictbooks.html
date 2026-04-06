@@ -332,38 +332,103 @@ document.addEventListener("DOMContentLoaded", function() {
 				
 					<style>
   .star-list {
-    list-style-type: none; /* remove default bullets */
+    list-style-type: none;
     padding-left: 0;
+    color: white;
   }
-  .star-list li::before {
-    content: "★ "; /* Unicode star */
-    color: indigo; /* star color */
+
+  .star-list > li {
+    margin-bottom: 6px;
+  }
+
+  .star-list > li::before {
+    content: "★ ";
+    color: indigo;
     font-weight: bold;
   }
-  .star-list a {
-    color: indigo !important;
+
+  .sub-list {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 4px;
+  }
+
+  .sub-list li {
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .star-list a, .sub-list a {
+    color: white !important;
     text-decoration: none;
     font-weight: bold;
   }
-  .star-list a:hover {
+
+  .star-list a:hover, .sub-list a:hover {
     text-decoration: underline;
+  }
+
+  .arrow {
+    font-weight: bold;
+    margin-right: 6px;
+  }
+
+  .note {
+    font-size: 11px;
+    color: white;
+    margin-left: 20px;
   }
 </style>
 
 <ul class="star-list">
- 	<li><a href="https://payhip.com/motStart1ctbooks">Payhip</a></li>
-<p style="color:white; font-size:11px;">
-	<i>--->From time to time, some of our main titles participate in Amazon’s KDP Select program, 
-		which offers platform-exclusive promotions. During these special periods, those titles are 
-		available only on Amazon books—giving you direct access to exclusive deals and features there.</i></p>
-<li>Amazon Books / Kindle: </li> 
-	> Children's ICT Books & Workbooks: <a href="https://www.amazon.com/stores/T.B.-Lume/author/B0GTP3HK8Z?ref=ap_rdr&shoppingPortalEnabled=true"> motStarter Keys Series: Workbooks </a> <br>
-	> General ICT Guide Books & Workbooks: Coming Soon! <br>
-	<li> Google Play Books:</li> 
-	> Children's ICT Workbooks: <a href="https://play.google.com/store/books/series?id=lLWgHAAAABA1qM"> motStarter Keys Series: Workbooks </a> <br>
-	> General ICT Guide Books & Workbooks: Coming Soon! <br>
+  <li>
+    <a href="https://payhip.com/motStart1ctbooks">Payhip</a>
+  </li>
 </ul>
 
+<p class="note">
+  <i>
+    --->From time to time, some of our main titles participate in Amazon’s KDP Select program, 
+    which offers platform-exclusive promotions. During these special periods, those titles are 
+    available only on Amazon books—giving you direct access to exclusive deals and features there.
+  </i>
+</p>
+
+<ul class="star-list">
+  <li>
+    Amazon Books / Kindle:
+    <ul class="sub-list">
+      <li>
+        <span class="arrow">➤</span>
+        Children's ICT Books & Workbooks:
+        <a href="https://www.amazon.com/stores/T.B.-Lume/author/B0GTP3HK8Z?ref=ap_rdr&shoppingPortalEnabled=true">
+          motStarter Keys Series: Workbooks
+        </a>
+      </li>
+      <li>
+        <span class="arrow">➤</span>
+        General ICT Guide Books & Workbooks: Coming Soon!
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    Google Play Books:
+    <ul class="sub-list">
+      <li>
+        <span class="arrow">➤</span>
+        Children's ICT Workbooks:
+        <a href="https://play.google.com/store/books/series?id=lLWgHAAAABA1qM">
+          motStarter Keys Series: Workbooks
+        </a>
+      </li>
+      <li>
+        <span class="arrow">➤</span>
+        General ICT Guide Books & Workbooks: Coming Soon!
+      </li>
+    </ul>
+  </li>
+</ul>
 				<br><br><br><br>  <p class="mbr-text mbr-fonts-style display-7"> <em>
 			*Note: <i>Publishing, promo campaigns and verification processes can vary across platforms,
 					and certain territorial distribution restrictions may apply. 
